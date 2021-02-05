@@ -21,7 +21,13 @@ app.use(cors());
 app.use(express.static('website'));
 
 // Spin up the server
+const port = 3000;
+app.listen(port, listening);
+
 // Callback to debug
+function listening() {
+    console.log(`Running server on port ${port}`)
+}
 
 // Initialize all route with a callback function
 
