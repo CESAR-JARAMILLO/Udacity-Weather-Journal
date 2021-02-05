@@ -1,4 +1,8 @@
 /* Global Variables */
+const feelings = document.getElementById('feelings');
+const date = document.getElementById('date');
+const temp = document.getElementById('temp');
+const content = document.getElementById('content');
 
 // Create a new date instance dynamically with JS
 let d = new Date();
