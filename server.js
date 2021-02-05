@@ -26,11 +26,15 @@ app.listen(port, listening);
 
 // Callback to debug
 function listening() {
-    console.log(`Running server on port ${port}`)
+    console.log(`Running server on port ${port}`);
 }
 
 // Initialize all route with a callback function
+app.get('/all', callback);
 
 // Callback function to complete GET '/all'
+function callback(req, res) {
+    res.send(projectData);
+}
 
 // Post Route
