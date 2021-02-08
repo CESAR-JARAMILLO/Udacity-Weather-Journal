@@ -51,3 +51,15 @@ const postData = async (url = '', data = {}) => {
 
 
 /* Function to GET Project Data */
+const retrieveData = async () => {
+    const request = await fetch('/all');
+    try {
+      const allData = await request.json()
+      date.innerHTML = `Date: ${allData.date}`;
+      temp.innerHTML = `Temp: ${allData.temp}°C`;
+      content.innerHTML = `Mood: ${allData.content}`;
+    }
+    catch (error) {
+      console.log("error", error);
+    }
+  };
