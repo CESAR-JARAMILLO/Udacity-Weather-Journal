@@ -16,6 +16,16 @@ const apiKey = '4eea124321f4cf6134b118ca8105f6e2';
 document.getElementById('generate').addEventListener('click', performAction);
 
 /* Function called by event listener */
+function performAction(e) {
+    const newZip = document.getElementById('zip').value;
+    getWeather(baseUrl, newZip, apiKey)
+        .then(function(data) {
+            postData('/add', {date: newDate, temp: data.main.temp, content: feelings.value})
+        })
+        .then(function(newData) {
+            retrieveData()
+        })
+};
 
 /* Function to GET Web API Data*/
 const getWeather = async (baseUrl, zip, key) => {
