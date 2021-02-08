@@ -13,6 +13,7 @@ const baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 const apiKey = '4eea124321f4cf6134b118ca8105f6e2';
 
 // Event listener to add function to existing HTML DOM element
+document.getElementById('generate').addEventListener('click', performAction);
 
 /* Function called by event listener */
 
