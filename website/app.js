@@ -18,6 +18,16 @@ document.getElementById('generate').addEventListener('click', performAction);
 /* Function called by event listener */
 
 /* Function to GET Web API Data*/
+const getWeather = async (baseUrl, zip, key) => {
+    const res = await fetch(`${baseUrl}?zip=${zip},us&units=metric&APPID=${apiKey}`)
+    try{
+        const data = await res.json();
+        // console.log(data)
+        return data;
+    } catch(error) {
+        console.log('error', error)
+    }
+}
 
 /* Function to POST data */
 
